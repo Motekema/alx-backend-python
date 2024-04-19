@@ -5,22 +5,22 @@ Module for type checking with mypy.
 from typing import List, Tuple
 
 
-def zoom_array(lst: List, factor: int = 2) -> Tuple:
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """
     Zooms in an array by repeating each element a specified number of times.
 
     Args:
-        lst (List): The list to zoom in.
+        lst (Tuple): The list to zoom in.
         factor (int, optional): The factor by which to zoom in. Defaults to 2.
 
     Returns:
-        Tuple: The zoomed-in array.
+        List: The zoomed-in array.
     """
     zoomed_in: List = [
         item for item in lst
         for i in range(factor)
     ]
-    return tuple(zoomed_in)
+    return zoomed_in
 
 
 array = [12, 72, 91]

@@ -4,12 +4,15 @@ This module contains a function to create an asyncio.Task.
 """
 
 import asyncio
+import time
 
 
-wait_random = __import__('0-basic_async_syntax').wait_random
+wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
-def task_wait_random(max_delay: int) -> asyncio.Task:
-    '''Creates an asynchronous task for wait_random.
+def measure_time(n: int, max_delay: int) -> float:
+    '''Computer the average runtime of wait_n.
     '''
-    return asyncio.create_task(wait_random(max_delay))
+    start_time = time.time()
+    asyncio.run(wait_n(n, max_delay))
+    return (time.time() - start_time) / n

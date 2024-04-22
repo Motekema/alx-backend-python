@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This module contains a function to create an asyncio.Task that executes multiple coroutines concurrently.
+This module contains a function to create an asyncio
 """
 
 import asyncio

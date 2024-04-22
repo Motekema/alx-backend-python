@@ -2,25 +2,17 @@
 """
 Module for annotating a function that safely retrieves a value
 """
-from typing import Mapping, Any, Union, TypeVar
+from typing import Any, Mapping, Union, TypeVar
 
-# Define a generic type variable
+
 T = TypeVar('T')
+Res = Union[Any, T]
+Def = Union[T, None]
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Union[T, None] = None)
--> Union[Any, T]:
-    """
-    Safely retrieves a value from a dictionary.
-
-    Args:
-        dct (Mapping): The dictionary to search for the key.
-        key (Any): The key to look up in the dictionary.
-        default (Union[T, None], optional): The default value to return
-
-    Returns:
-        Union[Any, T]: The value associated with the key in the dictionary
-    """
+def safely_get_value(dct: Mapping, key: Any, default: Def = None) -> Res:
+    '''Retrieves a value from a dict using a given key.
+    '''
     if key in dct:
         return dct[key]
     else:

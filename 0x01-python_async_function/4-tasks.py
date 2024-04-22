@@ -10,7 +10,7 @@ from random import uniform
 
 async def wait_random(max_delay: Union[int, float] = 10) -> float:
     """
-    Asynchronous coroutine that waits for a random delay between 0 and max_delay seconds.
+    Asynchronous coroutine that waits for a random delay between 0 
 
     Args:
         max_delay (Union[int, float]): The maximum delay in seconds.
@@ -25,7 +25,7 @@ async def wait_random(max_delay: Union[int, float] = 10) -> float:
 
 def task_wait_random(max_delay: Union[int, float] = 10) -> asyncio.Task:
     """
-    Create an asyncio.Task that runs the wait_random coroutine with the specified max_delay.
+    Create an asyncio.Task that runs the wait_random coroutine
 
     Args:
         max_delay (Union[int, float]): The maximum delay in seconds.
@@ -38,7 +38,7 @@ def task_wait_random(max_delay: Union[int, float] = 10) -> asyncio.Task:
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
-    Asynchronous routine that spawns task_wait_random n times with the specified max_delay.
+    Asynchronous routine that spawns task_wait_random n 
 
     Args:
         n (int): The number of times to spawn task_wait_random.

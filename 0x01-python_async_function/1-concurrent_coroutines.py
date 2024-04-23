@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This module contains an asynchronous routine that executes multiple coroutines concurrently.
+This module contains an asynchronous routine that executes multiple
 """
 
 import asyncio
@@ -11,7 +11,7 @@ from time import sleep
 
 async def wait_random(max_delay: int) -> float:
     """
-    Asynchronous coroutine that waits for a random delay between 0 and max_delay seconds.
+    Asynchronous coroutine that waits for a random delay between 0
 
     Args:
         max_delay (int): The maximum delay in seconds.
@@ -26,7 +26,7 @@ async def wait_random(max_delay: int) -> float:
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """
-    Asynchronous routine that spawns wait_random n times with the specified max_delay.
+    Asynchronous routine that spawns wait_random n times
 
     Args:
         n (int): The number of times to spawn wait_random.
